@@ -6,18 +6,23 @@ import { AppComponent } from './app.component';
 import { AdddonorComponent } from './adddonor/adddonor.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule,Routes } from '@angular/router';
+import { SearchdonorComponent } from './searchdonor/searchdonor.component';
 
 
 const appRoutes : Routes=[
   {
     path:"",component:AdddonorComponent
+  },
+  {
+    path:"search",component:SearchdonorComponent
   }
 ]
 @NgModule({
   declarations: [
     AppComponent,
     AdddonorComponent,
-    NavbarComponent
+    NavbarComponent,
+    SearchdonorComponent
   ],
   imports: [
     BrowserModule,
