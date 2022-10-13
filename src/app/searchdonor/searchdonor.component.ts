@@ -8,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class SearchdonorComponent implements OnInit {
 
   constructor() { }
+  bloodgroup=""
+
+  readValue=()=>{
+    let data={
+      "bloodgroup":this.bloodgroup
+    }
+    console.log(data)
+  }
 
   ngOnInit(): void {
   }
