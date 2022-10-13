@@ -8,7 +8,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule,Routes } from '@angular/router';
 import { SearchdonorComponent } from './searchdonor/searchdonor.component';
 import { DeletedonorComponent } from './deletedonor/deletedonor.component';
-
+import { ViewallComponent } from './viewall/viewall.component';
+import {HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 const appRoutes : Routes=[
   {
@@ -19,6 +21,9 @@ const appRoutes : Routes=[
   },
   {
     path:"delete", component:DeletedonorComponent
+  },
+  {
+    path:"view",component:ViewallComponent
   }
 ]
 @NgModule({
@@ -27,12 +32,15 @@ const appRoutes : Routes=[
     AdddonorComponent,
     NavbarComponent,
     SearchdonorComponent,
-    DeletedonorComponent
+    DeletedonorComponent,
+    ViewallComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
